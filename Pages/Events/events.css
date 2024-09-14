@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.events-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.event-card {
+    margin: 40px auto;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.event-info h2 {
+    margin: 15px 0 5px;
+    font-size: 1.5rem;
+}
+
+.event-info p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev, .next {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a img {
+    width: 25px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin-top: 20px;
+    color: #777;
+}
+

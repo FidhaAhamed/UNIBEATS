@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section {
+    padding: 40px;
+    background-color: #111;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content img {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.about-text {
+    max-width: 40%;
+}
+
+.know-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.events-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.event-details-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.connect-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.clients-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #222;
+}
+
+.client-logos img {
+    margin: 0 20px;
+    width: 100px;
+}
+
+.team-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-member img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.contact-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #222;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group img {
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 80%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn,
+.clear-btn {
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background-color: #999;
+}
+
+.newsletter-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+.newsletter-form {
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
