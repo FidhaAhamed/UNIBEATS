@@ -1,21 +1,45 @@
 /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #000;
     color: white;
+    overflow-x: hidden;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    align-items: center;
     padding: 20px;
-    background-color: #000;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-left: 100px;
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
+    padding: 0; 
+    margin-left: 200px;
+    gap: 100px;
 }
 
 .nav-links li {
@@ -26,6 +50,21 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    font-size: 25px;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .events-section {
@@ -40,24 +79,32 @@ h1 {
     color: #fff;
 }
 
+/* Slider Container */
 .event-card {
+    position: relative; /* Enable absolute positioning for child elements */
     margin: 40px auto;
-    position: relative;
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     background-color: #222;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevent image overflow */
 }
 
+/* Image Styling */
 .event-image img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
+
+/* Event Info */
 .event-info h2 {
     margin: 15px 0 5px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
 }
 
 .event-info p {
@@ -65,54 +112,104 @@ h1 {
     color: #ccc;
 }
 
+/* Slider Controls */
 .slider-controls {
     position: absolute;
     top: 50%;
-    width: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
+    pointer-events: none; /* Prevent pointer interference */
 }
 
 .prev, .next {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
+    padding: 10px;
     cursor: pointer;
+    pointer-events: all; /* Allow pointer events on buttons */
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Add hover effect */
+}
+
+/* Ensure that buttons stay inside card */
+.prev {
+    margin-left: 10px;
+}
+
+.next {
+    margin-right: 10px;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #111;
-    padding: 40px 20px;
+    background-color: #000; 
+    padding: 50px 20px; 
+    text-align: center;
+    color: #fff; 
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.footer-content {
-    margin-bottom: 20px;
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin: 20px 0;
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
+footer .social-icons a img {
+    width: 30px; 
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.footer-links ul li {
-    display: inline;
-    margin: 0 10px;
+footer .social-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8; 
 }
 
-.footer-links ul li a {
-    color: white;
+footer .links {
+    margin-top: 20px;
+}
+
+footer .links a {
+    margin: 0 20px; 
+    color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s; 
 }
 
-.social-links a img {
-    width: 25px;
-    margin: 0 10px;
+footer .links a:hover {
+    color: #ccc; 
 }
 
 footer p {
+    font-size: 14px;
     margin-top: 20px;
-    color: #777;
+    line-height: 1.5;
 }
+
+footer p a {
+    color: #fff; 
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+footer p a:hover {
+    color: #ccc;
+}
+
 
