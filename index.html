@@ -13,6 +13,9 @@
         <div class="logo">
            <a href="#"><img src="../../Assets/Unibeats_White-removebg-preview.png" alt="Unibeats Logo"></a> 
         </div>
+        <div class="menu-icon">
+            ☰
+        </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="Pages/About us/about.html">About Us</a></li>
@@ -23,7 +26,10 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <img src="../../Assets/Rectangle 15.jpg" alt="Concert Image">
+        <img src="../../Assets/Rectangle 15.jpg" 
+     srcset="../../Assets/Rectangle 15-small.jpg 600w, ../../Assets/Rectangle 15-medium.jpg 1000w" 
+     sizes="(max-width: 600px) 100vw, 1000px"
+     alt="Concert Image">
     </section>
 
     <!-- About Us Section -->
@@ -95,27 +101,33 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="contact-section">
-        <h1>Contact Us</h1>
-        <form>
-            <div class="form-group">
-                <input type="text" id="name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" placeholder="Email Address">
-            </div>
-            <div class="form-group">
-                <input type="text" id="phone" placeholder="Phone">
-            </div>
-            <div class="form-group">
-                <input type="text" id="subject" placeholder="Subject">
-            </div>
-            <div class="form-group">
-                <textarea id="message" placeholder="How can we help you?"></textarea>
-            </div>
+    <section class="contact-form-section">
+        <div class="form-container">
+            <img src="../../Assets/Rectangle 11.jpg" alt="Concert Image">
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
 
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+
+                <label for="message">How can we help you?</label>
+                <textarea id="message" name="message" placeholder="Your Message Here"></textarea>
+
+                <label>
+                    <input type="checkbox" id="agreement">
+                    I agree that my data is collected and stored.
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </section>
 
     <!-- Newsletter Section -->
@@ -146,6 +158,6 @@
             <p>&copy; 2024 Unibeats - <a href="#">Website Terms of Use</a> - <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
-
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,15 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
-}
-
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -18,14 +7,35 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     display: flex;
-    justify-content: left;
+    justify-content: space-between; 
     align-items: center;
     padding: 20px;
     position: absolute; 
     width: 100%;
     z-index: 1;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    text-align: right;
+    right: 60px; 
+    top: 20px;
+    position: absolute;
 }
 
 .logo img {
@@ -37,9 +47,11 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    padding: 0; 
-    margin-left: 200px;
-    gap: 100px;
+    gap: 70px; 
+    padding: 0;
+    justify-content: flex-end; /* Align links to the right */
+    overflow-x: hidden;
+    margin-right: 100px;
 }
 
 .nav-links li {
@@ -72,18 +84,19 @@ nav {
     width: 100%;
     height: auto;
 }
-
+/* About Section */
 .about-intro {
-    text-align: center;
-    padding: 50px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .about-intro h1 {
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
 .about-intro p {
@@ -94,26 +107,25 @@ nav {
 
 .about-intro .about-logo {
     margin-top: 40px;
-    margin-right: 50px;
     width: 300px;
     height: auto;
 }
 
+/* Team Section */
 .team {
     text-align: center;
     padding: 50px 20px;
 }
 
-.team h2 {
+.team h2{
     font-size: 35px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
 
 .team-members {
     display: flex;
-    justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
+    justify-content: space-evenly;
+    gap: 250px;
 }
 
 .team-member {
@@ -127,16 +139,6 @@ nav {
     border-radius: 50%;
 }
 
-.team-member h3 {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.team-member p {
-    font-size: 16px;
-    color: #aaa;
-}
-
 .connect-btn {
     margin-top: 30px;
     padding: 10px 20px;
@@ -148,13 +150,9 @@ nav {
     font-size: 16px;
 }
 
-.connect-btn:hover {
-    background-color: white;
-    color: black;
-}
-
+/* Experience Section */
 .experience {
-    background-image: url('concert-experience.jpg');
+    background-image: url('../../Assets/concert-experience.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -163,11 +161,11 @@ nav {
 }
 
 .experience h2 {
-    font-size: 36px;
+    font-size: 50px;
     transform: rotate(-10deg);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #000;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 100px;
 }
 
 /* Footer Styles */
@@ -232,5 +230,204 @@ footer p a {
 footer p a:hover {
     color: #ccc;
 }
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .logo img {
+        width: 120px;
+        margin-left: 50px;
+    }
+
+    .nav-links {
+        gap: 40px;
+        margin-left: 50px;
+        margin-right: 10px;
+    }
+
+    .nav-links a{
+        font-size: 22px;
+    }
+
+    .about-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-intro .about-logo {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .team-members {
+        justify-content: space-evenly;
+        gap: 100px;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+   
+    .team-member img {
+        width: 150px;
+     }
+
+    .experience h2 {
+        font-size: 39px;
+        padding: 10px 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        background-color: transparent;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+     }
+
+     .nav-links a {
+        font-size: 18px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-left: 20px;
+    }
 
 
+    .hero-section img {
+        height: auto;
+    }
+
+    .about-intro {
+        flex-direction: column;
+    }
+
+    .about-intro .about-logo {
+        width: 200px;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member img {
+        width: 150px;
+    }
+
+    .experience h2 {
+        font-size: 30px;
+        padding: 10px 60px;
+    }
+
+    .connect-btn {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    footer .footer-content {
+        padding: 30px 20px;
+    }
+
+    footer .social-icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer .links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-icon{
+        right: 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .nav-links a{
+        font-size: 16px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start; /* Ensures the logo stays aligned to the left */
+        width: 100%; /* Stretches the logo container to full width */
+    }
+
+    .logo img {
+        width: 100px;
+        margin-left: 20px; /* Adjust this value as needed for spacing */
+    }
+
+    .about-intro h1,
+    .team h2 {
+        font-size: 25px;
+    }
+
+    .about-intro p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .about-intro .about-logo {
+        width: 150px;
+    }
+
+    .team-member img {
+        width: 120px;
+    }
+
+    .connect-btn {
+        font-size: 14px;
+    }
+
+    .experience h2 {
+        font-size: 25px;
+        padding: 10px 40px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
