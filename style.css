@@ -336,21 +336,27 @@ footer .footer-content {
 }
 
 footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
-    margin: 20px 0;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Space between icons */
+    margin: 20px 0; /* Space around the icon section */
 }
 
-footer .social-icons a img {
-    width: 30px; 
-    transition: transform 0.3s, opacity 0.3s;
+footer .social-icons a {
+    text-decoration: none; /* Remove underline from links */
 }
 
-footer .social-icons a:hover img {
-    transform: scale(1.2);
-    opacity: 0.8; 
+footer .social-icons i {
+    font-size: 20px; /* Set a consistent size for icons */
+    color: #fff; /* Set the color to white */
+    transition: transform 0.3s, color 0.3s; /* Add a transition for hover effect */
 }
+
+footer .social-icons a:hover i {
+    transform: scale(1.2); /* Scale up the icon on hover */
+    color: #ccc; /* Change color on hover */
+}
+
 
 footer .links {
     margin-top: 20px;
@@ -519,7 +525,6 @@ footer p a:hover {
     }
 
     footer .social-icons {
-        flex-direction: column;
         gap: 15px;
     }
 
