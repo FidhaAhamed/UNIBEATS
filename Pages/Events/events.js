@@ -47,3 +47,10 @@ document.getElementById('prevBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + events.length) % events.length; // Loop back to last event
     updateEvent(currentIndex);
 });
+
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
